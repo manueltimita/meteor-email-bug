@@ -2,13 +2,13 @@
 
 Reproduction repo for bug affecting the `emails` package in Meteor 3.0.
 
-No need for real credential, as the package fails before sending.
+No need for real credentials, as the package fails before sending.
 
 See `server/main.js`.
 
 ## To reproduce
 
-`git clone` the `meteor run`.
+Clone this repo, then execute `meteor run`.
 
 The app should should fail at startup with:
 
