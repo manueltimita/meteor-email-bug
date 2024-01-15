@@ -2,6 +2,7 @@ import { Email } from 'meteor/email';
 
 Meteor.startup(function () {
   process.env.MAIL_URL = 'smtp://postmaster@example.com:my_mail_password@smtp.foo.org:587';
+
   Email.sendAsync({
     to: 'someone@example.com',
     from: 'someone-else@example.com',
@@ -10,7 +11,7 @@ Meteor.startup(function () {
   }).catch((err) => {
     console.error('Error sending email', { err });
   });
-  
+
   Meteor.bindEnvironment(function() {
     Email.sendAsync({
       to: 'someone2@example.com',
@@ -18,11 +19,11 @@ Meteor.startup(function () {
       subject: 'Testing Meteor emails (2)',
       html: '<p>Hello again!</p>',
     })
-    .then((res) => {
-      console.log('Email number 2 was sent', { res });
-	})
-	.catch((err) => {
-      console.error('Error sending email number 2', { err });
-	});
+      .then((res) => {
+        console.log('Email number 2 was sent', { res });
+      })
+      .catch((err) => {
+        console.error('Error sending email number 2', { err });
+      });
   });
 });
