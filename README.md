@@ -1,6 +1,6 @@
 # meteor-email-bug
 
-Reproduction repo for bug affecting the `emails` package in Meteor 3.0.
+Reproduction repo for bug affecting the `emails` package in Meteor 3.0 &mdash; see [#12963](https://github.com/meteor/meteor/issues/12963).
 
 No need for real credentials, as the package fails before sending.
 
