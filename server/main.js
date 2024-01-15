@@ -10,4 +10,19 @@ Meteor.startup(function () {
   }).catch((err) => {
     console.error('Error sending email', { err });
   });
+  
+  Meteor.bindEnvironment(function() {
+    Email.sendAsync({
+      to: 'someone2@example.com',
+      from: 'someone-else2@example.com',
+      subject: 'Testing Meteor emails (2)',
+      html: '<p>Hello again!</p>',
+    })
+    .then((res) => {
+      console.log('Email number 2 was sent', { res });
+	})
+	.catch((err) => {
+      console.error('Error sending email number 2', { err });
+	});
+  });
 });
