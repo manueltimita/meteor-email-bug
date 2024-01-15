@@ -17,3 +17,4 @@ server-render@0.4.2-beta300.0           # Support for server-side rendering
 hot-module-replacement@0.5.4-beta300.0  # Rebuilds the client if there is a change on the client without restarting the server
 
 email@3.0.0-beta300.0
+accounts-password
